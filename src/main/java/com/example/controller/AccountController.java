@@ -49,4 +49,10 @@ public class AccountController {
         model.addAttribute("accounts",accounts);
         return "show";
     }
+    @RequestMapping("/findOne2")
+    public String findOne2(String id, Model model){
+        Account account = accountService.findOne(Integer.parseInt(id));
+        model.addAttribute("account",account);
+        return "show";
+    }
 }
