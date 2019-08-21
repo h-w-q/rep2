@@ -42,4 +42,17 @@ public class AccountController {
         model.addAttribute("accounts",accounts);
         return "show";
     }
+
+    @RequestMapping("/findAll2")
+    public String findAll2(Model model){
+        List<Account> accounts = accountService.findAll();
+        model.addAttribute("accounts",accounts);
+        return "show";
+    }
+    @RequestMapping("/findOne2")
+    public String findOne2(String id, Model model){
+        Account account = accountService.findOne(Integer.parseInt(id));
+        model.addAttribute("account",account);
+        return "show";
+    }
 }
