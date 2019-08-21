@@ -55,4 +55,11 @@ public class AccountController {
         model.addAttribute("account",account);
         return "show";
     }
+
+    @RequestMapping("/findOne3")
+    public String findOne3(String id, Model model){
+        Account account = accountService.findOne(Integer.parseInt(id));
+        model.addAttribute("account",account);
+        return "show";
+    }
 }
