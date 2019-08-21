@@ -10,4 +10,5 @@ public interface AccountDao {
     Account findOne(Integer id);
     void delete(Integer id);
     List<Account> findAll();
+    List<Account> findAll2();
 }
