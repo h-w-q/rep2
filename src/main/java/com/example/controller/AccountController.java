@@ -42,11 +42,4 @@ public class AccountController {
         model.addAttribute("accounts",accounts);
         return "show";
     }
-
-    @RequestMapping("/findAll2")
-    public String findAll2(Model model){
-        List<Account> accounts = accountService.findAll();
-        model.addAttribute("accounts",accounts);
-        return "show";
-    }
 }
